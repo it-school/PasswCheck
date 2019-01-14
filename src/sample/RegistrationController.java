@@ -1,8 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
-
-import java.awt.*;
+import javafx.scene.control.TextField;
 
 import static sample.Main.users;
 
@@ -16,12 +15,11 @@ public class RegistrationController
 
     public void registration()
     {
-//        String loginNew = regLogin.getText();
-//        String passwordNew = regPassword.getText();
-        String loginNew = "user";
-        String passwordNew = "QWer45&*";
+        String loginNew = regLogin.getText();
+        String passwordNew = regPassword.getText();
 
-        // todo check if login exists
+
+        // check if login exists
             for (User user:users)
             {
                 if (user.login.equals(loginNew))
@@ -29,7 +27,7 @@ public class RegistrationController
             }
         System.out.println("User is new");
 
-        // todo check if password valid
+        // check if password valid
         int errCode = Password.isValid(passwordNew);
         System.out.println(ErrorsInfo.getMessage(errCode));
 
@@ -40,7 +38,7 @@ public class RegistrationController
 
         User user = new User(loginNew, new Passwords());
 
-
         users.add(user);
+        System.out.println("Total users: " + users.size());
     }
 }
