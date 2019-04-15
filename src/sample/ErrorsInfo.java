@@ -9,7 +9,7 @@ public class ErrorsInfo
             case 0 :
                 return "No error";
             case 1 :
-                return "Password length must be at least " + Contants.PASSWORD_LENGTH + " chars";
+                return "Password length must be at least " + Constants.PASSWORD_LENGTH + " chars";
             case 2:
                 return "Password must contain at least 1 UpperCase char";
             case 3:

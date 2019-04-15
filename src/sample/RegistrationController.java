@@ -23,16 +23,19 @@ public class RegistrationController
             for (User user:users)
             {
                 if (user.login.equals(loginNew))
+                {
+                    System.out.println("This login is already taken!");
                     return;
+                }
             }
         System.out.println("User is new");
 
         // check if password valid
         int errCode = Password.isValid(passwordNew);
-        System.out.println(ErrorsInfo.getMessage(errCode));
 
         if (errCode > 0)
         {
+            System.out.println(ErrorsInfo.getMessage(errCode));
             return;
         }
 
@@ -40,5 +43,6 @@ public class RegistrationController
 
         users.add(user);
         System.out.println("Total users: " + users.size());
+
     }
 }

@@ -42,13 +42,13 @@ public class Password
         int counter = 0;
 
         //todo check minimal length
-        if (password.length() < Contants.PASSWORD_LENGTH)
+        if (password.length() < Constants.PASSWORD_LENGTH)
             return 1;
 
         //todo Validation UpperCase
         for (char c: password.toCharArray())
         {
-            if (Contants.UpperCaseSymbols.contains(c+""))
+            if (Constants.UpperCaseSymbols.contains(c + ""))
             {
                 counter++;
                 break;
@@ -56,7 +56,6 @@ public class Password
         }
         if (counter == 0)
             return 2;
-
 
         //todo Validation LowerCase
         counter = 0;
@@ -97,7 +96,6 @@ public class Password
         }
         if (counter == 0)
             return 5;
-
 
         return 0;
     }

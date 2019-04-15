@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class Main extends Application {
+    public static ArrayList<User> users;
 
     @Override
     public void start(Stage primaryStage) throws Exception
@@ -18,9 +19,6 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
-
-    public static ArrayList<User> users;
-
 
     public static void main(String[] args) {
         users = new ArrayList<>();
