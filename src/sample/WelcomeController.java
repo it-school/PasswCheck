@@ -30,6 +30,6 @@ public class WelcomeController
 
     public void tryToLogin(ActionEvent actionEvent)
     {
-
+        // todo check if user exists and active password correct
     }
 }

@@ -46,7 +46,7 @@ public class Password
             return 1;
 
         //todo Validation UpperCase
-        for (char c: password.toCharArray())
+        for (char c : password.toCharArray()) // Q1w2e3r4%
         {
             if (Constants.UpperCaseSymbols.contains(c + ""))
             {
@@ -86,9 +86,9 @@ public class Password
 
         //todo Validation NonAlphaAndNonNumber
         counter = 0;
-        for (char c: password.toCharArray())
+        for (char c : password.toCharArray()) // Q1w2e3r4%
         {
-            if (!Character.isAlphabetic(c) && !Character.isDigit(c))
+            if (Constants.NoNAlphaOrDigit.contains(c + ""))
             {
                 counter++;
                 break;

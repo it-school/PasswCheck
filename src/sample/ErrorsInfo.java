@@ -17,7 +17,7 @@ public class ErrorsInfo
             case 4:
                 return "Password must contain at least 1 digit char";
             case 5:
-                return "Password must contain at least 1 non-symbol and non-digit char";
+                return "Password must contain at least 1 symbol of: ( . , : ; ? ! * + % - < > @ [ ] { } / \\ _ $ # )";
             default:
                 return "Unknown error";
         }
